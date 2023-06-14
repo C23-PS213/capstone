@@ -6,6 +6,7 @@ import 'package:jerawat/app/modules/scanwajah1/components/galeri.dart';
 import 'package:jerawat/constants/constants.dart';
 import 'package:jerawat/app/modules/widgets/appbar.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/scanwajah1_controller.dart';
 
 class Scanwajah1View extends GetView<Scanwajah1Controller> {
@@ -21,7 +22,11 @@ class Scanwajah1View extends GetView<Scanwajah1Controller> {
             child: Column(
               children: [
                 SizedBox(height: getPropertionateScreenHeight(38),),
-                Container(child: NamaApp(judul: 'Scan Wajah')),
+                Container(
+                    child: NamaApp(judul: 'Scan Wajah', onTap: (){
+                      Get.toNamed(Routes.HOME);
+                    },),
+                ),
                 SizedBox(height: getPropertionateScreenHeight(91),),
                 Container(
                   width: getPropertionateScreenWidht(160),
@@ -29,6 +34,11 @@ class Scanwajah1View extends GetView<Scanwajah1Controller> {
                   decoration: BoxDecoration(
                     color: Color(0xFFE8E8E4),
                     borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: InkWell(
+                    onTap: (){
+                      Get.toNamed(Routes.SCANWAJAH2);
+                    },
                   ),
                 ),
                 SizedBox(

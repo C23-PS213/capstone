@@ -71,7 +71,9 @@ class ProdukContent extends StatelessWidget {
                         style: primaryTextStyle.copyWith(
                           fontSize: 14,
                           fontWeight: regular,
+                          overflow: TextOverflow.ellipsis,
                         ),
+                        maxLines: 2,
                       ),
                     ),
                   ),

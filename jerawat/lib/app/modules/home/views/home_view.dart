@@ -7,6 +7,7 @@ import 'package:jerawat/app/modules/home/components/search.dart';
 import 'package:jerawat/app/modules/widgets/cart-konten.dart';
 import 'package:jerawat/constants/constants.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -61,9 +62,13 @@ class HomeView extends GetView<HomeController> {
                     SizedBox(width: getPropertionateScreenWidht(20),),
                     CardMenu(judul: 'Klinik terdekat', gambar: 'assets/images/home/health_clinic.png', onTap: (){},),
                     SizedBox(width: getPropertionateScreenWidht(10),),
-                    CardMenu(judul: 'Produk', gambar: 'assets/images/home/products.png', onTap: (){},),
+                    CardMenu(judul: 'Produk', gambar: 'assets/images/home/products.png', onTap: (){
+                      Get.toNamed(Routes.PRODUK);
+                    },),
                     SizedBox(width: getPropertionateScreenWidht(10),),
-                    CardMenu(judul: 'Informasi', gambar: 'assets/images/home/information.png', onTap: (){},),
+                    CardMenu(judul: 'Informasi', gambar: 'assets/images/home/information.png', onTap: (){
+                      Get.toNamed(Routes.INFORMASI);
+                    },),
                   ],
                 ),
                 SizedBox(height: getPropertionateScreenHeight(19),),
@@ -72,9 +77,15 @@ class HomeView extends GetView<HomeController> {
                     SizedBox(width: getPropertionateScreenWidht(20),),
                     CardMenu(judul: 'Klinik terdekat', gambar: 'assets/images/logoi.png', onTap: (){},),
                     SizedBox(width: getPropertionateScreenWidht(10),),
-                    CardMenu(judul: 'Klinik terdekat', gambar: 'assets/images/logoi.png', onTap: (){},),
+                    //ROUTE SEMENTARA !!!
+                    CardMenu(judul: 'Scan Wajah', gambar: 'assets/images/logoi.png', onTap: (){
+                      Get.toNamed(Routes.SCANWAJAH1);
+                    },),
                     SizedBox(width: getPropertionateScreenWidht(10),),
-                    CardMenu(judul: 'Klinik terdekat', gambar: 'assets/images/logoi.png', onTap: (){},),
+                    //ROUTE SEMENTARA !!!
+                    CardMenu(judul: 'Profile', gambar: 'assets/images/logoi.png', onTap: (){
+                      Get.toNamed(Routes.PROFILE);
+                    },),
                   ],
                 ),
                 SizedBox(height: getPropertionateScreenHeight(10),),

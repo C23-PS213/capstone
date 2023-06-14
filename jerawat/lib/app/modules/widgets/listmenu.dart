@@ -6,11 +6,13 @@ import 'package:flutter/material.dart';
 
 class ListMenu extends StatelessWidget {
   final String judul;
+  final Color warna;
   final GestureTapCallback onTap;
 
   const ListMenu({
     Key? key,
     required this.judul,
+    required this.warna,
     required this.onTap,
 }) : super (key: key);
 
@@ -25,7 +27,7 @@ class ListMenu extends StatelessWidget {
           height: getPropertionateScreenHeight(45),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            color: kBackgroundColor,
+            color: warna,
           ),
           child: Row(
             children: [

@@ -8,6 +8,7 @@ import 'package:jerawat/app/modules/home/components/search.dart';
 import 'package:jerawat/app/modules/widgets/appbar.dart';
 
 
+import '../../../routes/app_pages.dart';
 import '../controllers/produk_controller.dart';
 
 class ProdukView extends GetView<ProdukController> {
@@ -24,7 +25,9 @@ class ProdukView extends GetView<ProdukController> {
               children: [
                 SizedBox(height: getPropertionateScreenHeight(38),),
                 Container(
-                  child: NamaApp(judul: 'Produk'),
+                  child: NamaApp(judul: 'Produk', onTap: (){
+                    Get.toNamed(Routes.HOME);
+                  },),
                 ),
                 SizedBox(height: getPropertionateScreenHeight(30),),
                 Container(
@@ -98,9 +101,13 @@ class ProdukView extends GetView<ProdukController> {
                 Column(
                   children: [
                     SizedBox(height: getPropertionateScreenHeight(10),),
-                    ProdukContent(gambar: 'assets/images/1.jpg', judul: 'SK-II', subtitle: 'Hahha bela', onTap: (){}),
+                    ProdukContent(gambar: 'assets/images/1.jpg', judul: 'SK-II', subtitle: 'Hahha bela', onTap: (){
+                      Get.toNamed(Routes.ISIPRODUK);
+                    }),
                     SizedBox(height: getPropertionateScreenHeight(10),),
-                    ProdukContent(gambar: 'assets/images/2.jpg', judul: 'SK-II', subtitle: 'Hahha bela merupakan sebuah pridako fjoigeesf', onTap: (){}),
+                    ProdukContent(gambar: 'assets/images/2.jpg', judul: 'SK-II', subtitle: 'Hahha bela merupakan sebuah pridako fjoigeesf', onTap: (){
+                      Get.toNamed(Routes.ISIPRODUK);
+                    }),
                   ],
                 ),
               ],

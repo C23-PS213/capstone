@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-class IsiprodukController extends GetxController {
-  //TODO: Implement IsiprodukController
+class GantipasswordController extends GetxController {
+  //TODO: Implement GantipasswordController
 
   final count = 0.obs;
   @override

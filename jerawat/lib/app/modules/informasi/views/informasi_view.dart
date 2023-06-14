@@ -5,6 +5,7 @@ import 'package:jerawat/app/modules/widgets/appbar.dart';
 import 'package:jerawat/app/modules/widgets/listmenu.dart';
 import 'package:jerawat/constants/constants.dart';
 import 'package:jerawat/app/config/size_config.dart';
+import '../../../routes/app_pages.dart';
 import '../controllers/informasi_controller.dart';
 
 class InformasiView extends GetView<InformasiController> {
@@ -20,7 +21,9 @@ class InformasiView extends GetView<InformasiController> {
             children: [
               SizedBox(height: getPropertionateScreenHeight(38),),
               Container(
-                child: NamaApp(judul: 'Informasi'),
+                child: NamaApp(judul: 'Informasi', onTap: (){
+                  Get.toNamed(Routes.HOME);
+                }),
               ),
               SizedBox(height: getPropertionateScreenHeight(64),),
               Container(
@@ -33,11 +36,11 @@ class InformasiView extends GetView<InformasiController> {
                 child: Column(
                   children: [
                     SizedBox(height: getPropertionateScreenHeight(37),),
-                    ListMenu(judul: 'Pengertian Jerawat', onTap: (){}),
+                    ListMenu(judul: 'Pengertian Jerawat', warna: kBackgroundColor, onTap: (){}),
                     SizedBox(height: getPropertionateScreenHeight(15),),
-                    ListMenu(judul: 'Jenis-Jenis Jerawat', onTap: (){}),
+                    ListMenu(judul: 'Jenis-Jenis Jerawat', warna: kBackgroundColor, onTap: (){}),
                     SizedBox(height: getPropertionateScreenHeight(15),),
-                    ListMenu(judul: 'Penanganan Jerawat', onTap: (){}),
+                    ListMenu(judul: 'Penanganan Jerawat', warna: kBackgroundColor, onTap: (){}),
                   ],
                 ),
               ),

@@ -18,6 +18,12 @@ abstract class Routes {
   static const PRODUK = _Paths.PRODUK;
   static const ISIPRODUK = _Paths.ISIPRODUK;
   static const INFORMASI = _Paths.INFORMASI;
+  static const PROFILE = _Paths.PROFILE;
+  static const INFORMASIPRIBADI = _Paths.INFORMASIPRIBADI;
+  static const EDITPROFILE = _Paths.EDITPROFILE;
+  static const PENGATURAN = _Paths.PENGATURAN;
+  static const GANTIPASSWORD = _Paths.GANTIPASSWORD;
+  static const SCANWAJAH2 = _Paths.SCANWAJAH2;
 }
 
 abstract class _Paths {
@@ -37,4 +43,10 @@ abstract class _Paths {
   static const PRODUK = '/produk';
   static const ISIPRODUK = '/isiproduk';
   static const INFORMASI = '/informasi';
+  static const PROFILE = '/profile';
+  static const INFORMASIPRIBADI = '/informasipribadi';
+  static const EDITPROFILE = '/editprofile';
+  static const PENGATURAN = '/pengaturan';
+  static const GANTIPASSWORD = '/gantipassword';
+  static const SCANWAJAH2 = '/scanwajah2';
 }

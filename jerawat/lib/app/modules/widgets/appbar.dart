@@ -8,9 +8,11 @@ import 'package:flutter/material.dart';
 
 class NamaApp extends StatelessWidget {
   final String judul;
+  final GestureTapCallback onTap;
   const NamaApp({
     Key? key,
     required this.judul,
+    required this.onTap,
 }) : super (key: key);
 
   @override
@@ -26,7 +28,7 @@ class NamaApp extends StatelessWidget {
                 SizedBox(width: getPropertionateScreenWidht(58),),
                 Container(
                   child: InkWell(
-                    onTap: () {},
+                    onTap: onTap,
                     child: Icon(
                       Icons.arrow_back_ios,
                       size: 20,
