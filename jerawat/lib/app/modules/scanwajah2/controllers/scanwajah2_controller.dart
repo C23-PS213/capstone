@@ -3,31 +3,13 @@ import 'package:image_picker/image_picker.dart';
 
 class Scanwajah2Controller extends GetxController {
 
-  RxString imagePath = RxString('');
+  RxString imagePath = ''.obs;
 
-  Future<void> pickImage() async {
+  Future getImage()async{
     final ImagePicker _picker = ImagePicker();
-    final XFile? pickedImage = await _picker.pickImage(source: ImageSource.gallery);
-    if (pickedImage != null) {
-      imagePath.value = pickedImage.path;
+    final image = await _picker.pickImage(source: ImageSource.camera);
+    if(image != null){
+      imagePath.value = image.path.toString();
     }
   }
-
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

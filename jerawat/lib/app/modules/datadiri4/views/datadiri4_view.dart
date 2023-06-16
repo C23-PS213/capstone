@@ -12,6 +12,7 @@ class Datadiri4View extends GetView<Datadiri4Controller> {
   const Datadiri4View({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final Datadiri4Controller controller = Get.put(Datadiri4Controller());
     SizeConfig().init(context);
     return Scaffold(
       backgroundColor: kBackgroundColor,
@@ -31,15 +32,15 @@ class Datadiri4View extends GetView<Datadiri4Controller> {
                 ),
               ),
               SizedBox(height: getPropertionateScreenHeight(45),),
-              FormDataDiri(form: 'Masukkan usia anda'),
+              FormDataDiri(form: 'Masukkan usia anda', kontrol: controller.usiaC,),
               SizedBox(height: getPropertionateScreenHeight(445),),
               ButtonDataDiriBack(
                 judul: 'Lanjut',
                 back: (){
-                  Get.toNamed(Routes.DATADIRI3);
+                  Get.toNamed(Routes.DATADIRI2);
                 },
                 onTap: (){
-                  Get.toNamed(Routes.DATADIRI5);
+                  controller.addData();
                 },
               ),
             ],

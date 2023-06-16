@@ -10,9 +10,10 @@ import '../../../routes/app_pages.dart';
 import '../controllers/register_controller.dart';
 
 class RegisterView extends GetView<RegisterController> {
-  const RegisterView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    //menggunakan controller register agar data tersimpan di firestore
+    final RegisterController controller = Get.put(RegisterController());
     SizeConfig().init(context);
     return Scaffold(
       backgroundColor: kBackgroundColor,
@@ -32,19 +33,49 @@ class RegisterView extends GetView<RegisterController> {
                 ),
               ),
               SizedBox(height: getPropertionateScreenHeight(60),),
-              FormLoginRegLup(judul: 'Email', form: 'masukkan email'),
+              FormLoginRegLup(
+                judul: 'Email',
+                form: 'masukkan email',
+                kontrol: controller.emailC,
+              ),
               SizedBox(height: getPropertionateScreenHeight(14),),
-              FormLoginRegLup(judul: 'Nomor HP', form: 'masukkan nomor hp'),
+              FormLoginRegLup(
+                judul: 'Nomor HP',
+                form: 'masukkan nomor hp',
+                kontrol: controller.phoneC,
+              ),
               SizedBox(height: getPropertionateScreenHeight(14),),
-              FormLoginRegLup(judul: 'kata Sandi', form: 'masukkan kata sandi'),
+              FormLoginRegLup(
+                judul: 'Password',
+                form: 'masukkan password',
+                kontrol: controller.passwordC,
+              ),
               SizedBox(height: getPropertionateScreenHeight(14),),
-              FormLoginRegLup(judul: 'Ulangi Kata ', form: 'ulangi kata sandi'),
+              FormLoginRegLup(
+                judul: 'Nama Lengkap',
+                form: 'masukkan Nama Lengkap',
+                kontrol: controller.namaLengkapC,
+              ),
+              SizedBox(height: getPropertionateScreenHeight(14),),
+              FormLoginRegLup(
+                judul: 'Nama Panggilan',
+                form: 'masukkan nama panggilan',
+                kontrol: controller.namaPanggilanC,
+              ),
+              SizedBox(height: getPropertionateScreenHeight(14),),
+              FormLoginRegLup(
+                judul: 'Usia',
+                form: 'masukkan usia',
+                kontrol: controller.usiaC,
+              ),
+              SizedBox(height: getPropertionateScreenHeight(14),),
               SizedBox(height: getPropertionateScreenHeight(50),),
               ButtonLoginRegLup(
                 judul: "MASUK",
                 onTap: () {
-                Get.toNamed(Routes.DATADIRI1);
-              }, ),
+                  controller.addData();
+                  //Get.toNamed(Routes.DATADIRI1);
+                }, ),
               SizedBox(height: getPropertionateScreenHeight(5),),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

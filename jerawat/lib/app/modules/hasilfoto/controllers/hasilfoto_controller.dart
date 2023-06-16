@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-class Datadiri3Controller extends GetxController {
-  //TODO: Implement Datadiri3Controller
+class HasilfotoController extends GetxController {
+  //TODO: Implement HasilfotoController
 
   final count = 0.obs;
   @override

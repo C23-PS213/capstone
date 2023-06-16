@@ -24,6 +24,7 @@ abstract class Routes {
   static const PENGATURAN = _Paths.PENGATURAN;
   static const GANTIPASSWORD = _Paths.GANTIPASSWORD;
   static const SCANWAJAH2 = _Paths.SCANWAJAH2;
+  static const HASILFOTO = _Paths.HASILFOTO;
 }
 
 abstract class _Paths {
@@ -49,4 +50,5 @@ abstract class _Paths {
   static const PENGATURAN = '/pengaturan';
   static const GANTIPASSWORD = '/gantipassword';
   static const SCANWAJAH2 = '/scanwajah2';
+  static const HASILFOTO = '/hasilfoto';
 }

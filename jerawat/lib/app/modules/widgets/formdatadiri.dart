@@ -5,10 +5,12 @@ import 'package:flutter/material.dart';
 
 class FormDataDiri extends StatelessWidget {
   final String form;
+  final TextEditingController kontrol;
   
   const FormDataDiri({
     Key? key,
     required this.form,
+    required this.kontrol,
 }) : super (key: key);
 
   @override
@@ -24,6 +26,7 @@ class FormDataDiri extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         child: TextField(
+          controller: kontrol,
           decoration: InputDecoration(
             hintText: form,
             contentPadding: EdgeInsets.only(left: 10),

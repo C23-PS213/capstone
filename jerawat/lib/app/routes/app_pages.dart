@@ -4,8 +4,6 @@ import '../modules/datadiri1/bindings/datadiri1_binding.dart';
 import '../modules/datadiri1/views/datadiri1_view.dart';
 import '../modules/datadiri2/bindings/datadiri2_binding.dart';
 import '../modules/datadiri2/views/datadiri2_view.dart';
-import '../modules/datadiri3/bindings/datadiri3_binding.dart';
-import '../modules/datadiri3/views/datadiri3_view.dart';
 import '../modules/datadiri4/bindings/datadiri4_binding.dart';
 import '../modules/datadiri4/views/datadiri4_view.dart';
 import '../modules/datadiri5/bindings/datadiri5_binding.dart';
@@ -14,6 +12,8 @@ import '../modules/editprofile/bindings/editprofile_binding.dart';
 import '../modules/editprofile/views/editprofile_view.dart';
 import '../modules/gantipassword/bindings/gantipassword_binding.dart';
 import '../modules/gantipassword/views/gantipassword_view.dart';
+import '../modules/hasilfoto/bindings/hasilfoto_binding.dart';
+import '../modules/hasilfoto/views/hasilfoto_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/informasi/bindings/informasi_binding.dart';
@@ -76,7 +76,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.REGISTER,
-      page: () => const RegisterView(),
+      page: () =>  RegisterView(),
       binding: RegisterBinding(),
     ),
     GetPage(
@@ -84,21 +84,16 @@ class AppPages {
       page: () => const LupapasswordView(),
       binding: LupapasswordBinding(),
     ),
-    GetPage(
-      name: _Paths.DATADIRI1,
-      page: () => const Datadiri1View(),
-      binding: Datadiri1Binding(),
-    ),
-    GetPage(
-      name: _Paths.DATADIRI2,
-      page: () => const Datadiri2View(),
-      binding: Datadiri2Binding(),
-    ),
-    GetPage(
-      name: _Paths.DATADIRI3,
-      page: () => const Datadiri3View(),
-      binding: Datadiri3Binding(),
-    ),
+    // GetPage(
+    //   name: _Paths.DATADIRI1,
+    //   page: () => const Datadiri1View(),
+    //   binding: Datadiri1Binding(),
+    // ),
+    // GetPage(
+    //   name: _Paths.DATADIRI2,
+    //   page: () => const Datadiri2View(),
+    //   binding: Datadiri2Binding(),
+    // ),
     GetPage(
       name: _Paths.DATADIRI4,
       page: () => const Datadiri4View(),
@@ -148,6 +143,11 @@ class AppPages {
       name: _Paths.SCANWAJAH2,
       page: () => const Scanwajah2View(),
       binding: Scanwajah2Binding(),
+    ),
+    GetPage(
+      name: _Paths.HASILFOTO,
+      page: () => const HasilfotoView(),
+      binding: HasilfotoBinding(),
     ),
   ];
 }

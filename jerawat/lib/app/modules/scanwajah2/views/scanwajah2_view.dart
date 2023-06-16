@@ -1,3 +1,4 @@
+
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -9,10 +10,9 @@ import 'package:jerawat/constants/constants.dart';
 import '../../../routes/app_pages.dart';
 import '../controllers/scanwajah2_controller.dart';
 
+final Scanwajah2Controller controller = Get.put(Scanwajah2Controller());
 class Scanwajah2View extends GetView<Scanwajah2Controller> {
-
   const Scanwajah2View({Key? key}) : super(key: key);
-
 
 
   @override
@@ -23,10 +23,34 @@ class Scanwajah2View extends GetView<Scanwajah2Controller> {
       body: Container(
         child: Column(
           children: [
-            SizedBox(height: getPropertionateScreenHeight(500),),
+            SizedBox(height: getPropertionateScreenHeight(100),),
+            Obx((){
+              return Column(
+                children: [
+                  Center(
+                    child: Container(
+                      width: getPropertionateScreenWidht(200),
+                      height: getPropertionateScreenHeight(200),
+                      decoration: BoxDecoration(
+                        image: controller.imagePath.isNotEmpty
+                            ? DecorationImage(
+                          image:
+                          FileImage(File(controller.imagePath.toString())),
+                          fit: BoxFit.cover,
+                        )
+                            : null,
+                      ),
+                    ),
+                  ),
+                ],
+              );
+            }),
+            SizedBox(height: getPropertionateScreenHeight(50),),
             Center(
               child: InkWell(
-                onTap: (){},
+                onTap: (){
+                  controller.getImage();
+                },
                 child: Container(
                   width: getPropertionateScreenWidht(321),
                   height: getPropertionateScreenHeight(50),
@@ -49,7 +73,9 @@ class Scanwajah2View extends GetView<Scanwajah2Controller> {
             SizedBox(height: getPropertionateScreenHeight(5),),
             Center(
               child: InkWell(
-                onTap: (){},
+                onTap: (){
+                  Get.toNamed(Routes.HASILFOTO);
+                },
                 child: Container(
                   width: getPropertionateScreenWidht(321),
                   height: getPropertionateScreenHeight(50),
@@ -59,7 +85,7 @@ class Scanwajah2View extends GetView<Scanwajah2Controller> {
                   ),
                   child: Center(
                     child: Text(
-                      'Ambil Galeri',
+                      'Simpan Gambari',
                       style: primaryTextStyle.copyWith(
                         fontSize: 18,
                         fontWeight: semiBold,
@@ -73,7 +99,7 @@ class Scanwajah2View extends GetView<Scanwajah2Controller> {
             Center(
               child: InkWell(
                 onTap: (){
-                  Get.toNamed(Routes.SCANWAJAH1);
+                  Get.toNamed(Routes.HASILFOTO);
                 },
                 child: Container(
                   width: getPropertionateScreenWidht(321),
@@ -84,7 +110,7 @@ class Scanwajah2View extends GetView<Scanwajah2Controller> {
                   ),
                   child: Center(
                     child: Text(
-                      'Batalkan',
+                      'Simpan Gambari',
                       style: primaryTextStyle.copyWith(
                         fontSize: 18,
                         fontWeight: semiBold,
@@ -92,23 +118,6 @@ class Scanwajah2View extends GetView<Scanwajah2Controller> {
                     ),
                   ),
                 ),
-              ),
-            ),
-            SizedBox(height: getPropertionateScreenHeight(5),),
-            Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Obx(() => Image.file(File(controller.imagePath.value))),
-                  ElevatedButton(
-                      onPressed: (){
-                        controller.pickImage();
-                      },
-                      child: Text(
-                        'pilih gambar'
-                      ),
-                  ),
-                ],
               ),
             ),
           ],

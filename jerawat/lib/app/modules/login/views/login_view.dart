@@ -33,9 +33,9 @@ class LoginView extends GetView<LoginController> {
                 ),
               ),
               SizedBox(height: getPropertionateScreenHeight(60),),
-              FormLoginRegLup(judul: 'Email', form: 'Masukkan Email'),
+              FormLoginRegLup(judul: 'Email', form: 'Masukkan Email',kontrol: controller.emailC,),
               SizedBox(height: getPropertionateScreenHeight(14),),
-              FormLoginRegLup(judul: 'Password', form: 'Masukkan Password'),
+              FormLoginRegLup(judul: 'Password', form: 'Masukkan Password',kontrol: controller.passwordC,),
               SizedBox(height: getPropertionateScreenHeight(14),),
               Align(
                 alignment: Alignment.centerRight,
@@ -56,7 +56,8 @@ class LoginView extends GetView<LoginController> {
               ButtonLoginRegLup(
                 judul: "LOGIN",
                 onTap: () {
-                  Get.toNamed(Routes.HOME);
+                  controller.loginUser();
+                  //Get.toNamed(Routes.HOME);
                 },
               ),
               SizedBox(height: getPropertionateScreenHeight(5),),

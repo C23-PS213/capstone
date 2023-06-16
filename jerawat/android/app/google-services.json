@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "65253071420",
+    "firebase_url": "https://bionic-comfort-386015-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "bionic-comfort-386015",
+    "storage_bucket": "bionic-comfort-386015.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65253071420:android:70188d88ff1850a7fd8139",
+        "android_client_info": {
+          "package_name": "com.example.jerawat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC57C53nthnnJr10_4VFHXfyko7-zyQ32w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

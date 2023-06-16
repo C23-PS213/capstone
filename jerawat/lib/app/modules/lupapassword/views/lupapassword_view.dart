@@ -31,7 +31,7 @@ class LupapasswordView extends GetView<LupapasswordController> {
                 ),
               ),
               SizedBox(height: getPropertionateScreenHeight(60),),
-              FormLoginRegLup(judul: 'Email', form: 'masukkan email'),
+              //FormLoginRegLup(judul: 'Email', form: 'masukkan email',),
               SizedBox(height: getPropertionateScreenHeight(50),),
               ButtonLoginRegLup(
                   judul: 'KIRIM',

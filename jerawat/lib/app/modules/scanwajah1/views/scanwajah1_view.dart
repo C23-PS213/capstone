@@ -52,27 +52,6 @@ class Scanwajah1View extends GetView<Scanwajah1Controller> {
                   ),
                 ),
                 SizedBox(height: getPropertionateScreenHeight(30),),
-                Row(
-                  children: [
-                    SizedBox(width: getPropertionateScreenWidht(50),),
-                    Galeri(gambar: 'assets/images/4.jpeg', onTap: (){},),
-                    SizedBox(width: getPropertionateScreenWidht(15),),
-                    Galeri(gambar: 'assets/images/4.jpeg', onTap: (){},),
-                    SizedBox(width: getPropertionateScreenWidht(15),),
-                    Galeri(gambar: 'assets/images/4.jpeg', onTap: (){},),
-                  ],
-                ),
-                SizedBox(height: getPropertionateScreenHeight(15),),
-                Row(
-                  children: [
-                    SizedBox(width: getPropertionateScreenWidht(50),),
-                    Galeri(gambar: 'assets/images/4.jpeg', onTap: (){},),
-                    SizedBox(width: getPropertionateScreenWidht(15),),
-                    Galeri(gambar: 'assets/images/4.jpeg', onTap: (){},),
-                    SizedBox(width: getPropertionateScreenWidht(15),),
-                    Galeri(gambar: 'assets/images/4.jpeg', onTap: (){},),
-                  ],
-                ),
               ],
             ),
           ),
